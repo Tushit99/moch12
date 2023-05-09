@@ -9,7 +9,9 @@ const app = express();
 app.use(express.json()); 
 app.use(cors()); 
 
-
+app.get("/",(req,res)=>{
+    res.send({message: "Welcome to my mock12 backend"})
+})
 app.use("/user",userRoute); 
 app.use("/dashbord",empRoute)
 
